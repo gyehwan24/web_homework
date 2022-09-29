@@ -40,3 +40,10 @@ footer {
   top: 850px;
   left: 30px;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+.top {
+  color: lightgray;
+}
