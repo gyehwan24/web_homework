@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백계환/60192203/웹프로그래밍 과제 #2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
+  </style>
+  <header>
+    <div class="header">
+      <img src="./img/mlb.png" width="150px" />
+      <h2>입력 페이지</h2>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li class="menu"><a href="index.html">소개</a></li>
+      <li class="menu"><a href="input.html">선수 입력</a></li>
+      <li class="menu"><a href="layout.html">팀 순위</a></li>
+    </ul>
+  </nav>
+  <body>
+    <main class="contents">
+      <h2 style="color: #ffa52d">⚾ 나만의 선수 만들기 ⚾</h2>
+      <form id="form">
+        <fieldset>
+          <legend class="media">기본 정보</legend>
+          <p>
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" class="nameInput" />
+          </p>
+          <p>
+            <label>전화번호 <input type="tel" name="tel" /> </label>
+          </p>
+          <p>
+            <label>이메일 <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <label>출생 <input type="date" name="birth" /></label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>선수 정보</legend>
+          <p>
+            <label for="team">팀</label>
+            <select name="team" id="team">
+              <option value="KIA" selected>KIA</option>
+              <option value="SSG">SSG</option>
+              <option value="KT">KT</option>
+              <option value="키움">키움</option>
+              <option value="LG">LG</option>
+              <option value="두산">두산</option>
+              <option value="한화">한화</option>
+              <option value="삼성">삼성</option>
+              <option value="NC">NC</option>
+              <option value="롯데">롯데</option>
+            </select>
+          </p>
+          <p>
+            <label>등번호 <input type="number" name="number" /></label>
+          </p>
+          <p>
+            <label>유니폼 색깔 <input type="color" name="color" /></label>
+          </p>
+          <p>포지션을 선택하세요</p>
+          <label
+            ><input type="radio" name="position" value="batter" />타자</label
+          >
+          <label
+            ><input type="radio" name="position" value="pitcher" />투수</label
+          >
+          <p>세부 포지션을 선택하요</p>
+          <label><input type="checkbox" name="detailPos" />내야수</label>
+          <label><input type="checkbox" name="detailPos" />외야수</label>
+          <label><input type="checkbox" name="detailPos" />선발투수</label>
+          <label><input type="checkbox" name="detailPos" />불펜투수</label>
+          <p>선수 한 줄 소개</p>
+          <label><textarea></textarea></label>
+        </fieldset>
+        <input type="reset" value="취소" id="cancel" />
+        <input type="submit" value="등록" id="submit" />
+      </form>
+    </main>
+    <div class="result"></div>
+    <h1 class="hidden" id="greeting"></h1>
+    <script src="dom.js"></script>
+  </body>
+</html>
